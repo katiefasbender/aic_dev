@@ -1,0 +1,153 @@
+column_name,column_aicname,dtype,unit,is_default,description
+solution_id,gaia_solution_id,int64[pyarrow],dimensionless,False,Solution Identifier
+designation,gaia_designation,string[pyarrow],dimensionless,False,Unique source designation (unique across all Data Releases)
+source_id,gaia_source_id,int64[pyarrow],dimensionless,True,Unique source identifier (unique within a particular Data Release)
+random_index,gaia_random_index,int64[pyarrow],dimensionless,False,Random index for use when selecting subsets
+ref_epoch,gaia_ref_epoch,double[pyarrow],Time[yr],True,Reference epoch
+ra,gaia_ra,double[pyarrow],Angle[deg],True,Right ascension
+ra_error,gaia_ra_error,float[pyarrow],Angle[mas],True,Standard error of right ascension
+dec,gaia_dec,double[pyarrow],Angle[deg],True,Declination
+dec_error,gaia_dec_error,float[pyarrow],Angle[mas],True,Standard error of declination
+parallax,gaia_parallax,double[pyarrow],Angle[mas],True,Parallax
+parallax_error,gaia_parallax_error,float[pyarrow],Angle[mas],True,Standard error of parallax
+parallax_over_error,gaia_parallax_over_error,float[pyarrow],dimensionless,False,Parallax divided by its standard error
+pm,gaia_pm,float[pyarrow],AngularVelocity[mas/yr],False,Total proper motion
+pmra,gaia_pmra,double[pyarrow],AngularVelocity[mas/yr],True,Proper motion in right ascension direction
+pmra_error,gaia_pmra_error,float[pyarrow],AngularVelocity[mas/yr],True,Standard error of proper motion in right ascension direction
+pmdec,gaia_pmdec,double[pyarrow],AngularVelocity[mas/yr],True,Proper motion in declination direction
+pmdec_error,gaia_pmdec_error,float[pyarrow],AngularVelocity[mas/yr],True,Standard error of proper motion in declination direction
+ra_dec_corr,gaia_ra_dec_corr,float[pyarrow],dimensionless,False,Correlation between right ascension and declination
+ra_parallax_corr,gaia_ra_parallax_corr,float[pyarrow],dimensionless,False,Correlation between right ascension and parallax
+ra_pmra_corr,gaia_ra_pmra_corr,float[pyarrow],dimensionless,False,Correlation between right ascension and proper motion in right ascension
+ra_pmdec_corr,gaia_ra_pmdec_corr,float[pyarrow],dimensionless,False,Correlation between right ascension and proper motion in declination
+dec_parallax_corr,gaia_dec_parallax_corr,float[pyarrow],dimensionless,False,Correlation between declination and parallax
+dec_pmra_corr,gaia_dec_pmra_corr,float[pyarrow],dimensionless,False,Correlation between declination and proper motion in right ascension
+dec_pmdec_corr,gaia_dec_pmdec_corr,float[pyarrow],dimensionless,False,Correlation between declination and proper motion in declination
+parallax_pmra_corr,gaia_parallax_pmra_corr,float[pyarrow],dimensionless,False,Correlation between parallax and proper motion in right ascension
+parallax_pmdec_corr,gaia_parallax_pmdec_corr,float[pyarrow],dimensionless,False,Correlation between parallax and proper motion in declination
+pmra_pmdec_corr,gaia_pmra_pmdec_corr,float[pyarrow],dimensionless,False,Correlation between proper motion in right ascension and proper motion in declination
+astrometric_n_obs_al,gaia_astrometric_n_obs_al,int16[pyarrow],dimensionless,False,Total number of observations in the along-scan (AL) direction
+astrometric_n_obs_ac,gaia_astrometric_n_obs_ac,int16[pyarrow],dimensionless,False,Total number of observations in the across-scan (AC) direction
+astrometric_n_good_obs_al,gaia_astrometric_n_good_obs_al,int16[pyarrow],dimensionless,False,Number of good observations in the along-scan (AL) direction
+astrometric_n_bad_obs_al,gaia_astrometric_n_bad_obs_al,int16[pyarrow],dimensionless,False,Number of bad observations in the along-scan (AL) direction
+astrometric_gof_al,gaia_astrometric_gof_al,float[pyarrow],dimensionless,False,Goodness of fit statistic of model wrt along-scan observations
+astrometric_chi2_al,gaia_astrometric_chi2_al,float[pyarrow],dimensionless,False,AL chi-square value
+astrometric_excess_noise,gaia_astrometric_excess_noise,float[pyarrow],Angle[mas],False,Excess noise of the source
+astrometric_excess_noise_sig,gaia_astrometric_excess_noise_sig,float[pyarrow],dimensionless,False,Significance of excess noise
+astrometric_params_solved,gaia_astrometric_params_solved,int8[pyarrow],dimensionless,False,Which parameters have been solved for?
+astrometric_primary_flag,gaia_astrometric_primary_flag,bool[pyarrow],dimensionless,False,Primary or seconday
+nu_eff_used_in_astrometry,gaia_nu_eff_used_in_astrometry,float[pyarrow],Misc[1/um],False,Effective wavenumber of the source used in the astrometric solution
+pseudocolour,gaia_pseudocolour,float[pyarrow],Misc[1/um],False,Astrometrically estimated pseudocolour of the source
+pseudocolour_error,gaia_pseudocolour_error,float[pyarrow],Misc[1/um],False,Standard error of the pseudocolour of the source
+ra_pseudocolour_corr,gaia_ra_pseudocolour_corr,float[pyarrow],dimensionless,False,Correlation between right ascension and pseudocolour
+dec_pseudocolour_corr,gaia_dec_pseudocolour_corr,float[pyarrow],dimensionless,False,Correlation between declination and pseudocolour
+parallax_pseudocolour_corr,gaia_parallax_pseudocolour_corr,float[pyarrow],dimensionless,False,Correlation between parallax and pseudocolour
+pmra_pseudocolour_corr,gaia_pmra_pseudocolour_corr,float[pyarrow],dimensionless,False,Correlation between proper motion in right asension and pseudocolour
+pmdec_pseudocolour_corr,gaia_pmdec_pseudocolour_corr,float[pyarrow],dimensionless,False,Correlation between proper motion in declination and pseudocolour
+astrometric_matched_transits,gaia_astrometric_matched_transits,int16[pyarrow],dimensionless,False,Matched FOV transits used in the AGIS solution
+visibility_periods_used,gaia_visibility_periods_used,int16[pyarrow],dimensionless,False,Number of visibility periods used in Astrometric solution
+astrometric_sigma5d_max,gaia_astrometric_sigma5d_max,float[pyarrow],Angle[mas],False,The longest semi-major axis of the 5-d error ellipsoid
+matched_transits,gaia_matched_transits,int16[pyarrow],dimensionless,False,The number of transits matched to this source
+new_matched_transits,gaia_new_matched_transits,int16[pyarrow],dimensionless,False,The number of transits newly incorporated into an existing source in the current cycle
+matched_transits_removed,gaia_matched_transits_removed,int16[pyarrow],dimensionless,False,The number of transits removed from an existing source in the current cycle
+ipd_gof_harmonic_amplitude,gaia_ipd_gof_harmonic_amplitude,float[pyarrow],dimensionless,False,Amplitude of the IPD GoF versus position angle of scan
+ipd_gof_harmonic_phase,gaia_ipd_gof_harmonic_phase,float[pyarrow],Angle[deg],False,Phase of the IPD GoF versus position angle of scan
+ipd_frac_multi_peak,gaia_ipd_frac_multi_peak,int8[pyarrow],dimensionless,False,Percent of successful-IPD windows with more than one peak
+ipd_frac_odd_win,gaia_ipd_frac_odd_win,int8[pyarrow],dimensionless,False,Percent of transits with truncated windows or multiple gate
+ruwe,gaia_ruwe,float[pyarrow],dimensionless,False,Renormalised unit weight error
+scan_direction_strength_k1,gaia_scan_direction_strength_k1,float[pyarrow],dimensionless,False,Degree of concentration of scan directions across the source
+scan_direction_strength_k2,gaia_scan_direction_strength_k2,float[pyarrow],dimensionless,False,Degree of concentration of scan directions across the source
+scan_direction_strength_k3,gaia_scan_direction_strength_k3,float[pyarrow],dimensionless,False,Degree of concentration of scan directions across the source
+scan_direction_strength_k4,gaia_scan_direction_strength_k4,float[pyarrow],dimensionless,False,Degree of concentration of scan directions across the source
+scan_direction_mean_k1,gaia_scan_direction_mean_k1,float[pyarrow],Angle[deg],False,Mean position angle of scan directions across the source
+scan_direction_mean_k2,gaia_scan_direction_mean_k2,float[pyarrow],Angle[deg],False,Mean position angle of scan directions across the source
+scan_direction_mean_k3,gaia_scan_direction_mean_k3,float[pyarrow],Angle[deg],False,Mean position angle of scan directions across the source
+scan_direction_mean_k4,gaia_scan_direction_mean_k4,float[pyarrow],Angle[deg],False,Mean position angle of scan directions across the source
+duplicated_source,gaia_duplicated_source,bool[pyarrow],dimensionless,False,Source with multiple source identifiers
+phot_g_n_obs,gaia_phot_g_n_obs,int16[pyarrow],dimensionless,False,Number of observations contributing to G photometry
+phot_g_mean_flux,gaia_phot_g_mean_flux,double[pyarrow],Flux[e-/s],True,G-band mean flux
+phot_g_mean_flux_error,gaia_phot_g_mean_flux_error,float[pyarrow],Flux[e-/s],True,Error on G-band mean flux
+phot_g_mean_flux_over_error,gaia_phot_g_mean_flux_over_error,float[pyarrow],dimensionless,False,G-band mean flux divided by its error
+phot_g_mean_mag,gaia_phot_g_mean_mag,float[pyarrow],VegaMagnitude[mag],True,G-band mean magnitude
+phot_bp_n_obs,gaia_phot_bp_n_obs,int16[pyarrow],dimensionless,False,Number of observations contributing to BP photometry
+phot_bp_mean_flux,gaia_phot_bp_mean_flux,double[pyarrow],Flux[e-/s],True,Integrated BP mean flux
+phot_bp_mean_flux_error,gaia_phot_bp_mean_flux_error,float[pyarrow],Flux[e-/s],True,True on the integrated BP mean flux
+phot_bp_mean_flux_over_error,gaia_phot_bp_mean_flux_over_error,float[pyarrow],dimensionless,False,Integrated BP mean flux divided by its error
+phot_bp_mean_mag,gaia_phot_bp_mean_mag,float[pyarrow],VegaMagnitude[mag],True,Integrated BP mean magnitude
+phot_rp_n_obs,gaia_phot_rp_n_obs,int16[pyarrow],dimensionless,False,Number of observations contributing to RP photometry
+phot_rp_mean_flux,gaia_phot_rp_mean_flux,double[pyarrow],Flux[e-/s],True,Integrated RP mean flux
+phot_rp_mean_flux_error,gaia_phot_rp_mean_flux_error,float[pyarrow],Flux[e-/s],True,Error on the integrated RP mean flux
+phot_rp_mean_flux_over_error,gaia_phot_rp_mean_flux_over_error,float[pyarrow],dimensionless,False,Integrated RP mean flux divided by its error
+phot_rp_mean_mag,gaia_phot_rp_mean_mag,float[pyarrow],VegaMagnitude[mag],True,Integrated RP mean magnitude
+phot_bp_rp_excess_factor,gaia_phot_bp_rp_excess_factor,float[pyarrow],dimensionless,False,BP/RP excess factor
+phot_bp_n_contaminated_transits,gaia_phot_bp_n_contaminated_transits,int16[pyarrow],dimensionless,False,Number of BP contaminated transits
+phot_bp_n_blended_transits,gaia_phot_bp_n_blended_transits,int16[pyarrow],dimensionless,False,Number of BP blended transits
+phot_rp_n_contaminated_transits,gaia_phot_rp_n_contaminated_transits,int16[pyarrow],dimensionless,False,Number of RP contaminated transits
+phot_rp_n_blended_transits,gaia_phot_rp_n_blended_transits,int16[pyarrow],dimensionless,False,Number of RP blended transits
+phot_proc_mode,gaia_phot_proc_mode,int8[pyarrow],dimensionless,False,Photometry processing mode
+bp_rp,gaia_bp_rp,float[pyarrow],VegaMagnitude[mag],False,BP - RP colour
+bp_g,gaia_bp_g,float[pyarrow],VegaMagnitude[mag],False,BP - G colour
+g_rp,gaia_g_rp,float[pyarrow],VegaMagnitude[mag],False,G - RP colour
+radial_velocity,gaia_radial_velocity,float[pyarrow],Velocity[km/s],False,Radial velocity
+radial_velocity_error,gaia_radial_velocity_error,float[pyarrow],Velocity[km/s],False,Radial velocity error
+rv_method_used,gaia_rv_method_used,int8[pyarrow],dimensionless,False,Method used to obtain the radial velocity
+rv_nb_transits,gaia_rv_nb_transits,int16[pyarrow],dimensionless,False,Number of transits used to compute the radial velocity
+rv_nb_deblended_transits,gaia_rv_nb_deblended_transits,int16[pyarrow],dimensionless,False,Number of valid transits that have undergone deblending
+rv_visibility_periods_used,gaia_rv_visibility_periods_used,int16[pyarrow],dimensionless,False,Number of visibility periods used to estimate the radial velocity
+rv_expected_sig_to_noise,gaia_rv_expected_sig_to_noise,float[pyarrow],dimensionless,False,Expected signal to noise ratio in the combination of the spectra used to obtain the radial velocity
+rv_renormalised_gof,gaia_rv_renormalised_gof,float[pyarrow],dimensionless,False,Radial velocity renormalised goodness of fit
+rv_chisq_pvalue,gaia_rv_chisq_pvalue,float[pyarrow],dimensionless,False,P-value for constancy based on a chi-squared criterion
+rv_time_duration,gaia_rv_time_duration,float[pyarrow],Time[d],False,Time coverage of the radial velocity time series
+rv_amplitude_robust,gaia_rv_amplitude_robust,float[pyarrow],Velocity[km/s],False,Total amplitude in the radial velocity time series after outlier removal
+rv_template_teff,gaia_rv_template_teff,float[pyarrow],Temperature[K],False,Teff of the template used to compute the radial velocity
+rv_template_logg,gaia_rv_template_logg,float[pyarrow],GravitySurface[log(cm/s/s)],False,Logg of the template used to compute the radial velocity
+rv_template_fe_h,gaia_rv_template_fe_h,float[pyarrow],Metallicity[dex],False,[Fe/H] of the template used to compute the radial velocityy
+rv_atm_param_origin,gaia_rv_atm_param_origin,int16[pyarrow],dimensionless,False,Origin of the atmospheric parameters associated to the template
+vbroad,gaia_vbroad,float[pyarrow],Velocity[km/s],False,Spectral line broadening parameter
+vbroad_error,gaia_vbroad_error,float[pyarrow],Velocity[km/s],False,Uncertainty on the spectral line broadening
+vbroad_nb_transits,gaia_vbroad_nb_transits,int16[pyarrow],dimensionless,False,Number of transits used to compute vbroad
+grvs_mag,gaia_grvs_mag,float[pyarrow],VegaMagnitude[mag],False,Integrated Grvs magnitude
+grvs_mag_error,gaia_grvs_mag_error,float[pyarrow],VegaMagnitude[mag],False,Grvs magnitude uncertainty
+grvs_mag_nb_transits,gaia_grvs_mag_nb_transits,int16[pyarrow],dimensionless,False,Number of transits used to compute Grvs
+rvs_spec_sig_to_noise,gaia_rvs_spec_sig_to_noise,float[pyarrow],dimensionless,False,Signal to noise ratio in the mean RVS spectrum
+phot_variable_flag,gaia_phot_variable_flag,string[pyarrow],dimensionless,True,Photometric variability flag
+l,gaia_l,double[pyarrow],Angle[deg],False,Galactic longitude
+b,gaia_b,double[pyarrow],Angle[deg],False,Galactic latitude
+ecl_lon,gaia_ecl_lon,double[pyarrow],Angle[deg],False,Ecliptic longitude
+ecl_lat,gaia_ecl_lat,double[pyarrow],Angle[deg],False,Ecliptic latitude
+in_qso_candidates,gaia_in_qso_candidates,bool[pyarrow],dimensionless,True,Flag indicating the availability of additional information in the QsoCandidates table
+in_galaxy_candidates,gaia_in_galaxy_candidates,bool[pyarrow],dimensionless,True,Flag indicating the availability of additional information in the GalaxyCandidates table
+non_single_star,gaia_non_single_star,int16[pyarrow],dimensionless,True,Flag indicating the availability of additional information in the various Non-Single Star tables
+has_xp_continuous,gaia_has_xp_continuous,bool[pyarrow],dimensionless,True,Flag indicating the availability of mean BP/RP spectrum in continuous representation for this source
+has_xp_sampled,gaia_has_xp_sampled,bool[pyarrow],dimensionless,False,Flag indicating the availability of mean BP/RP spectrum in sampled form for this source
+has_rvs,gaia_has_rvs,bool[pyarrow],dimensionless,False,Flag indicating the availability of mean RVS spectrum for this source
+has_epoch_photometry,gaia_has_epoch_photometry,bool[pyarrow],dimensionless,False,Flag indicating the availability of epoch photometry for this source
+has_epoch_rv,gaia_has_epoch_rv,bool[pyarrow],dimensionless,False,Flag indicating the availability of epoch radial velocity for this source
+has_mcmc_gspphot,gaia_has_mcmc_gspphot,bool[pyarrow],dimensionless,False,Flag indicating the availability of GSP-Phot MCMC samples for this source
+has_mcmc_msc,gaia_has_mcmc_msc,bool[pyarrow],dimensionless,False,Flag indicating the availability of MSC MCMC samples for this source
+in_andromeda_survey,gaia_in_andromeda_survey,bool[pyarrow],dimensionless,False,Flag indicating that the source is present in the Gaia Andromeda Photometric Survey (GAPS)
+classprob_dsc_combmod_quasar,gaia_classprob_dsc_combmod_quasar,float[pyarrow],dimensionless,True,"Probability from DSC-Combmod of being a quasar (data used: BP/RP spectrum, photometry, astrometry)"
+classprob_dsc_combmod_galaxy,gaia_classprob_dsc_combmod_galaxy,float[pyarrow],dimensionless,True,"Probability from DSC-Combmod of being a galaxy (data used: BP/RP spectrum, photometry, astrometry)"
+classprob_dsc_combmod_star,gaia_classprob_dsc_combmod_star,float[pyarrow],dimensionless,True,"Probability from DSC-Combmod of being a single star (but not a white dwarf) (data used: BP/RP spectrum, photometry, astrometry)"
+teff_gspphot,gaia_teff_gspphot,float[pyarrow],Temperature[K],False,Effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+teff_gspphot_lower,gaia_teff_gspphot_lower,float[pyarrow],Temperature[K],False,Lower confidence level (16%) of effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+teff_gspphot_upper,gaia_teff_gspphot_upper,float[pyarrow],Temperature[K],False,Upper confidence level (84%) of effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+logg_gspphot,gaia_logg_gspphot,float[pyarrow],GravitySurface[log(cm/s/s)],False,Surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+logg_gspphot_lower,gaia_logg_gspphot_lower,float[pyarrow],GravitySurface[log(cm/s/s)],False,Lower confidence level (16%) of surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+logg_gspphot_upper,gaia_logg_gspphot_upper,float[pyarrow],GravitySurface[log(cm/s/s)],False,Upper confidence level (84%) of surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+mh_gspphot,gaia_mh_gspphot,float[pyarrow],Metallicity[dex],False,Iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+mh_gspphot_lower,gaia_mh_gspphot_lower,float[pyarrow],Metallicity[dex],False,Lower confidence level (16%) of iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+mh_gspphot_upper,gaia_mh_gspphot_upper,float[pyarrow],Metallicity[dex],False,Upper confidence level (84%) of iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+distance_gspphot,gaia_distance_gspphot,float[pyarrow],Distance[pc],False,Distance from GSP-Phot Aeneas best library using BP/RP spectra
+distance_gspphot_lower,gaia_distance_gspphot_lower,float[pyarrow],Distance[pc],False,Lower confidence level (16%) of distance from GSP-Phot Aeneas best library using BP/RP spectra
+distance_gspphot_upper,gaia_distance_gspphot_upper,float[pyarrow],Distance[pc],False,Upper confidence level (84%) of distance from GSP-Phot Aeneas best library using BP/RP spectra
+azero_gspphot,gaia_azero_gspphot,float[pyarrow],VegaMagnitude[mag],True,Monochromatic extinction A0 at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+azero_gspphot_lower,gaia_azero_gspphot_lower,float[pyarrow],VegaMagnitude[mag],True,Lower confidence level (16%) of monochromatic extinction A0 at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+azero_gspphot_upper,gaia_azero_gspphot_upper,float[pyarrow],VegaMagnitude[mag],True,Upper confidence level (84%) of monochromatic extinction A0 at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+ag_gspphot,gaia_ag_gspphot,float[pyarrow],VegaMagnitude[mag],True,Extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+ag_gspphot_lower,gaia_ag_gspphot_lower,float[pyarrow],VegaMagnitude[mag],True,Lower confidence level (16%) of extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+ag_gspphot_upper,gaia_ag_gspphot_upper,float[pyarrow],VegaMagnitude[mag],True,Upper confidence level (84%) of extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+ebpminrp_gspphot,gaia_ebpminrp_gspphot,float[pyarrow],VegaMagnitude[mag],True,Reddening E(GBP - GRP) from GSP-Phot Aeneas best library using BP/RP spectra
+ebpminrp_gspphot_lower,gaia_ebpminrp_gspphot_lower,float[pyarrow],VegaMagnitude[mag],True,Lower confidence level (16%) of reddening E(GBP - GRP) from GSP-Phot Aeneas best library using BP/RP spectra
+ebpminrp_gspphot_upper,gaia_ebpminrp_gspphot_upper,float[pyarrow],VegaMagnitude[mag],True,Upper confidence level (84%) of reddening E(GBP - GRP) from GSP-Phot Aeneas best library using BP/RP spectra
+libname_gspphot,gaia_libname_gspphot,string[pyarrow],dimensionless,False,Name of library that achieves the highest mean log-posterior in MCMC samples and was used to derive GSP-Phot parameters in this table

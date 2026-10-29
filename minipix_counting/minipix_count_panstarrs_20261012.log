@@ -1,0 +1,153 @@
+Computing cumulative unique minipix and source counts per magnitude bin for Pan-STARRS partitions...
+2026-10-12 23:08:18,342 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 226, in read
+    frames_nosplit_nbytes_bin = await stream.read_bytes(fmt_size)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/worker.py", line 1273, in heartbeat
+    response = await retry_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+    ...<14 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 416, in retry_operation
+    return await retry(
+           ^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 395, in retry
+    return await coro()
+           ^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1259, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1018, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 237, in read
+    convert_stream_closed_error(self, e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://127.0.0.1:38456 remote=tcp://127.0.0.1:35257>: Stream is closed
+2026-10-12 23:08:18,366 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 226, in read
+    frames_nosplit_nbytes_bin = await stream.read_bytes(fmt_size)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/worker.py", line 1273, in heartbeat
+    response = await retry_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+    ...<14 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 416, in retry_operation
+    return await retry(
+           ^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 395, in retry
+    return await coro()
+           ^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1259, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1018, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 237, in read
+    convert_stream_closed_error(self, e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://127.0.0.1:38458 remote=tcp://127.0.0.1:35257>: Stream is closed
+2026-10-12 23:08:18,420 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 226, in read
+    frames_nosplit_nbytes_bin = await stream.read_bytes(fmt_size)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/worker.py", line 1273, in heartbeat
+    response = await retry_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+    ...<14 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 416, in retry_operation
+    return await retry(
+           ^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 395, in retry
+    return await coro()
+           ^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1259, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1018, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 237, in read
+    convert_stream_closed_error(self, e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://127.0.0.1:38462 remote=tcp://127.0.0.1:35257>: Stream is closed
+2026-10-12 23:08:18,426 - distributed.scheduler - WARNING - Received heartbeat from unregistered worker 'tcp://127.0.0.1:41647'.
+2026-10-12 23:08:18,459 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 226, in read
+    frames_nosplit_nbytes_bin = await stream.read_bytes(fmt_size)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/worker.py", line 1273, in heartbeat
+    response = await retry_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+    ...<14 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 416, in retry_operation
+    return await retry(
+           ^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/utils_comm.py", line 395, in retry
+    return await coro()
+           ^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1259, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/core.py", line 1018, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 237, in read
+    convert_stream_closed_error(self, e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/kmfas/hdps/.venv/lib/python3.14/site-packages/distributed/comm/tcp.py", line 137, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://127.0.0.1:38466 remote=tcp://127.0.0.1:35257>: Stream is closed
+Calculated counts in 19165.768876075745 seconds
+total cumulative minipix count ber mag bin =  [526633369, 526633374, 526633383, 526633399, 526633630, 526634279, 526635543, 526637642, 526641001, 526646196, 526654582, 526667413, 526687855, 526720872, 526765453, 526809239, 526859353, 526922354, 527000065, 527079779, 527134901, 527167418, 527186287, 527197037]
+total cumulative source count ber mag bin =  [116679.0, 392613.0, 914099.0, 1895889.0, 4867976.0, 8915700.0, 14405507.0, 22080059.0, 33142330.0, 49588719.0, 74803077.0, 112640843.0, 170264390.0, 259609102.0, 382491063.0, 529999672.0, 726644292.0, 990100936.0, 1321454567.0, 1675494861.0, 1944324625.0, 2113360853.0, 2213926799.0, 2272465202.0]

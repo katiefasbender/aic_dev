@@ -1,0 +1,125 @@
+column_name,data_type,unit,description
+objName,VARCHAR(32),dimensionless,IAU name for this object.
+objAltName1,VARCHAR(32),dimensionless,Alternate name for this object.
+objAltName2,VARCHAR(32),dimensionless,Altername name for this object.
+objAltName3,VARCHAR(32),dimensionless,Altername name for this object.
+objID,BIGINT,dimensionless,Unique object identifier.
+uniquePspsOBid,BIGINT,dimensionless,Unique internal PSPS object identifier.
+ippObjID,BIGINT,dimensionless,IPP internal object identifier.
+surveyID,TINYINT,dimensionless,Survey identifier. Details in the Survey table.
+htmID,BIGINT,dimensionless,Hierarchical triangular mesh (Szalay 2007) index.
+zoneID,INT,dimensionless,Local zone index found by dividing the sky into bands of declination 1/2 arcminute in height: zoneID = floor((90 + declination)/0.0083333).
+tessID,TINYINT,dimensionless,Tessellation identifier. Details in the TessellationType table.
+projectionID,SMALLINT,dimensionless,Projection cell identifier.
+skyCellID,TINYINT,dimensionless,Skycell region identifier.
+randomID,FLOAT,dimensionless,Random value drawn from the interval between zero and one.
+batchID,BIGINT,dimensionless,Internal database batch identifier.
+dvoRegionID,INT,dimensionless,Internal DVO region identifier.
+processingVersion,TINYINT,dimensionless,Data release version.
+objInfoFlag,INT,dimensionless,Information flag bitmask indicating details of the photometry. Values listed in ObjectInfoFlags.
+qualityFlag,TINYINT,dimensionless,Subset of objInfoFlag denoting whether this object is real or a likely false positive. Values listed in ObjectQualityFlags.
+raStack,FLOAT,Angle[deg],"Right ascension from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information."
+decStack,FLOAT,Angle[deg],"Declination from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information."
+raStackErr,REAL,Angle[arcsec],Right ascension standard deviation from stack detections.
+decStackErr,REAL,Angle[arcsec],Declination standard deviation from stack detections.
+raMean,FLOAT,Angle[deg],Right ascension from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.
+decMean,FLOAT,Angle[deg],Declination from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.
+raMeanErr,REAL,Angle[arcsec],Right ascension standard deviation from single epoch detections.
+decMeanErr,REAL,Angle[arcsec],Declination standard deviation from single epoch detections.
+epochMean,FLOAT,Time[MJD],"Modified Julian Date of the mean epoch corresponding to raMean, decMean (equinox J2000)."
+posMeanChisq,REAL,dimensionless,Reduced chi squared value of mean position.
+cx,FLOAT,dimensionless,Cartesian x on a unit sphere.
+cy,FLOAT,dimensionless,Cartesian y on a unit sphere.
+cz,FLOAT,dimensionless,Cartesian z on a unit sphere.
+lambda,FLOAT,Angle[deg],Ecliptic longitude.
+beta,FLOAT,Angle[deg],Ecliptic latitude.
+l,FLOAT,Angle[deg],Galactic longitude.
+b,FLOAT,Angle[deg],Galactic latitude.
+nStackObjectRows,SMALLINT,dimensionless,Number of independent StackObjectThin rows associated with this object.
+nStackDetections,SMALLINT,dimensionless,Number of stack detections.
+nDetections,SMALLINT,dimensionless,Number of single epoch detections in all filters.
+ng,SMALLINT,dimensionless,Number of single epoch detections in g filter.
+nr,SMALLINT,dimensionless,Number of single epoch detections in r filter.
+ni,SMALLINT,dimensionless,Number of single epoch detections in i filter.
+nz,SMALLINT,dimensionless,Number of single epoch detections in z filter.
+ny,SMALLINT,dimensionless,Number of single epoch detections in y filter.
+gQfPerfect,REAL,dimensionless,Maximum PSF weighted fraction of pixels totally unmasked from g filter detections.
+gMeanPSFMag,REAL,ABMagnitude[mag],Mean PSF magnitude from g filter detections.
+gMeanPSFMagErr,REAL,ABMagnitude[mag],Error in mean PSF magnitude from g filter detections.
+gMeanPSFMagStd,REAL,ABMagnitude[mag],Standard deviation of PSF magnitudes from g filter detections.
+gMeanPSFMagNpt,SMALLINT,dimensionless,Number of measurements included in mean PSF magnitude from g filter detections.
+gMeanPSFMagMin,REAL,ABMagnitude[mag],Minimum PSF magnitude from g filter detections.
+gMeanPSFMagMax,REAL,ABMagnitude[mag],Maximum PSF magnitude from g filter detections.
+gMeanKronMag,REAL,ABMagnitude[mag],Mean Kron (1980) magnitude from g filter detections.
+gMeanKronMagErr,REAL,ABMagnitude[mag],Error in mean Kron (1980) magnitude from g filter detections.
+gMeanKronMagStd,REAL,ABMagnitude[mag],Standard deviation of Kron (1980) magnitudes from g filter detections.
+gMeanKronMagNpt,SMALLINT,dimensionless,Number of measurements included in mean Kron (1980) magnitude from g filter detections.
+gMeanApMag,REAL,ABMagnitude[mag],Mean aperture magnitude from g filter detections.
+gMeanApMagErr,REAL,ABMagnitude[mag],Error in mean aperture magnitude from g filter detections.
+gMeanApMagStd,REAL,ABMagnitude[mag],Standard deviation of aperture magnitudes from g filter detections.
+gMeanApMagNpt,SMALLINT,dimensionless,Number of measurements included in mean aperture magnitude from g filter detections.
+gFlags,INT,dimensionless,Information flag bitmask for mean object from g filter detections. Values listed in ObjectFilterFlags.
+rQfPerfect,REAL,dimensionless,Maximum PSF weighted fraction of pixels totally unmasked from r filter detections.
+rMeanPSFMag,REAL,ABMagnitude[mag],Mean PSF magnitude from r filter detections.
+rMeanPSFMagErr,REAL,ABMagnitude[mag],Error in mean PSF magnitude from r filter detections.
+rMeanPSFMagStd,REAL,ABMagnitude[mag],Standard deviation of PSF magnitudes from r filter detections.
+rMeanPSFMagNpt,SMALLINT,dimensionless,Number of measurements included in mean PSF magnitude from r filter detections.
+rMeanPSFMagMin,REAL,ABMagnitude[mag],Minimum PSF magnitude from r filter detections.
+rMeanPSFMagMax,REAL,ABMagnitude[mag],Maximum PSF magnitude from r filter detections.
+rMeanKronMag,REAL,ABMagnitude[mag],Mean Kron (1980) magnitude from r filter detections.
+rMeanKronMagErr,REAL,ABMagnitude[mag],Error in mean Kron (1980) magnitude from r filter detections.
+rMeanKronMagStd,REAL,ABMagnitude[mag],Standard deviation of Kron (1980) magnitudes from r filter detections.
+rMeanKronMagNpt,SMALLINT,dimensionless,Number of measurements included in mean Kron (1980) magnitude from r filter detections.
+rMeanApMag,REAL,ABMagnitude[mag],Mean aperture magnitude from r filter detections.
+rMeanApMagErr,REAL,ABMagnitude[mag],Error in mean aperture magnitude from r filter detections.
+rMeanApMagStd,REAL,ABMagnitude[mag],Standard deviation of aperture magnitudes from r filter detections.
+rMeanApMagNpt,SMALLINT,dimensionless,Number of measurements included in mean aperture magnitude from r filter detections.
+rFlags,INT,dimensionless,Information flag bitmask for mean object from r filter detections. Values listed in ObjectFilterFlags.
+iQfPerfect,REAL,dimensionless,Maximum PSF weighted fraction of pixels totally unmasked from i filter detections.
+iMeanPSFMag,REAL,ABMagnitude[mag],Mean PSF magnitude from i filter detections.
+iMeanPSFMagErr,REAL,ABMagnitude[mag],Error in mean PSF magnitude from i filter detections.
+iMeanPSFMagStd,REAL,ABMagnitude[mag],Standard deviation of PSF magnitudes from i filter detections.
+iMeanPSFMagNpt,SMALLINT,dimensionless,Number of measurements included in mean PSF magnitude from i filter detections.
+iMeanPSFMagMin,REAL,ABMagnitude[mag],Minimum PSF magnitude from i filter detections.
+iMeanPSFMagMax,REAL,ABMagnitude[mag],Maximum PSF magnitude from i filter detections.
+iMeanKronMag,REAL,ABMagnitude[mag],Mean Kron (1980) magnitude from i filter detections.
+iMeanKronMagErr,REAL,ABMagnitude[mag],Error in mean Kron (1980) magnitude from i filter detections.
+iMeanKronMagStd,REAL,ABMagnitude[mag],Standard deviation of Kron (1980) magnitudes from i filter detections.
+iMeanKronMagNpt,SMALLINT,dimensionless,Number of measurements included in mean Kron (1980) magnitude from i filter detections.
+iMeanApMag,REAL,ABMagnitude[mag],Mean aperture magnitude from i filter detections.
+iMeanApMagErr,REAL,ABMagnitude[mag],Error in mean aperture magnitude from i filter detections.
+iMeanApMagStd,REAL,ABMagnitude[mag],Standard deviation of aperture magnitudes from i filter detections.
+iMeanApMagNpt,SMALLINT,dimensionless,Number of measurements included in mean aperture magnitude from i filter detections.
+iFlags,INT,dimensionless,Information flag bitmask for mean object from i filter detections. Values listed in ObjectFilterFlags.
+zQfPerfect,REAL,dimensionless,Maximum PSF weighted fraction of pixels totally unmasked from z filter detections.
+zMeanPSFMag,REAL,ABMagnitude[mag],Mean PSF magnitude from z filter detections.
+zMeanPSFMagErr,REAL,ABMagnitude[mag],Error in mean PSF magnitude from z filter detections.
+zMeanPSFMagStd,REAL,ABMagnitude[mag],Standard deviation of PSF magnitudes from z filter detections.
+zMeanPSFMagNpt,SMALLINT,dimensionless,Number of measurements included in mean PSF magnitude from z filter detections.
+zMeanPSFMagMin,REAL,ABMagnitude[mag],Minimum PSF magnitude from z filter detections.
+zMeanPSFMagMax,REAL,ABMagnitude[mag],Maximum PSF magnitude from z filter detections.
+zMeanKronMag,REAL,ABMagnitude[mag],Mean Kron (1980) magnitude from z filter detections.
+zMeanKronMagErr,REAL,ABMagnitude[mag],Error in mean Kron (1980) magnitude from z filter detections.
+zMeanKronMagStd,REAL,ABMagnitude[mag],Standard deviation of Kron (1980) magnitudes from z filter detections.
+zMeanKronMagNpt,SMALLINT,dimensionless,Number of measurements included in mean Kron (1980) magnitude from z filter detections.
+zMeanApMag,REAL,ABMagnitude[mag],Mean aperture magnitude from z filter detections.
+zMeanApMagErr,REAL,ABMagnitude[mag],Error in mean aperture magnitude from z filter detections.
+zMeanApMagStd,REAL,ABMagnitude[mag],Standard deviation of aperture magnitudes from z filter detections.
+zMeanApMagNpt,SMALLINT,dimensionless,Number of measurements included in mean aperture magnitude from z filter detections.
+zFlags,INT,dimensionless,Information flag bitmask for mean object from z filter detections. Values listed in ObjectFilterFlags.
+yQfPerfect,REAL,dimensionless,Maximum PSF weighted fraction of pixels totally unmasked from y filter detections.
+yMeanPSFMag,REAL,ABMagnitude[mag],Mean PSF magnitude from y filter detections.
+yMeanPSFMagErr,REAL,ABMagnitude[mag],Error in mean PSF magnitude from y filter detections.
+yMeanPSFMagStd,REAL,ABMagnitude[mag],Standard deviation of PSF magnitudes from y filter detections.
+yMeanPSFMagNpt,SMALLINT,dimensionless,Number of measurements included in mean PSF magnitude from y filter detections.
+yMeanPSFMagMin,REAL,ABMagnitude[mag],Minimum PSF magnitude from y filter detections.
+yMeanPSFMagMax,REAL,ABMagnitude[mag],Maximum PSF magnitude from y filter detections.
+yMeanKronMag,REAL,ABMagnitude[mag],Mean Kron (1980) magnitude from y filter detections.
+yMeanKronMagErr,REAL,ABMagnitude[mag],Error in mean Kron (1980) magnitude from y filter detections.
+yMeanKronMagStd,REAL,ABMagnitude[mag],Standard deviation of Kron (1980) magnitudes from y filter detections.
+yMeanKronMagNpt,SMALLINT,dimensionless,Number of measurements included in mean Kron (1980) magnitude from y filter detections.
+yMeanApMag,REAL,ABMagnitude[mag],Mean aperture magnitude from y filter detections.
+yMeanApMagErr,REAL,ABMagnitude[mag],Error in mean aperture magnitude from y filter detections.
+yMeanApMagStd,REAL,ABMagnitude[mag],Standard deviation of aperture magnitudes from y filter detections.
+yMeanApMagNpt,SMALLINT,dimensionless,Number of measurements included in mean aperture magnitude from y filter detections.
+yFlags,INT,dimensionless,Information flag bitmask for mean object from y filter detections. Values listed in ObjectFilterFlags.

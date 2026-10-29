@@ -1,0 +1,132 @@
+column_name,column_aicname,dtype,unit,is_default,description
+objName,ps_objName,string[pyarrow],dimensionless,False,IAU name for this object.
+objNameHMS,ps_objNameHMS,string[pyarrow],dimensionless,False,No description
+objAltName1,ps_objAltName1,string[pyarrow],dimensionless,False,Alternate name for this object.
+objAltName2,ps_objAltName2,string[pyarrow],dimensionless,False,Altername name for this object.
+objAltName3,ps_objAltName3,string[pyarrow],dimensionless,False,Altername name for this object.
+objPopularName,ps_objPopularName,string[pyarrow],dimensionless,False,Well known name for this object.
+objID,ps_objID,int64[pyarrow],dimensionless,True,Unique object identifier.
+uniquePspsOBid,ps_uniquePspsOBid,int64[pyarrow],dimensionless,False,Unique internal PSPS object identifier.
+ippObjID,ps_ippObjID,int64[pyarrow],dimensionless,False,IPP internal object identifier.
+surveyID,ps_surveyID,int16[pyarrow],dimensionless,False,Survey identifier. Details in the Survey table.
+htmID,ps_htmID,int64[pyarrow],dimensionless,False,Hierarchical triangular mesh (Szalay 2007) index.
+zoneID,ps_zoneID,int32[pyarrow],dimensionless,False,Local zone index found by dividing the sky into bands of declination 1/2 arcminute in height: zoneID = floor((90 + declination)/0.0083333).
+tessID,ps_tessID,int16[pyarrow],dimensionless,False,Tessellation identifier. Details in the TessellationType table.
+projectionID,ps_projectionID,int16[pyarrow],dimensionless,False,Projection cell identifier.
+skyCellID,ps_skyCellID,int16[pyarrow],dimensionless,False,Skycell region identifier.
+randomID,ps_randomID,double[pyarrow],dimensionless,False,Random value drawn from the interval between zero and one.
+batchID,ps_batchID,int64[pyarrow],dimensionless,False,Internal database batch identifier.
+dvoRegionID,ps_dvoRegionID,int32[pyarrow],dimensionless,False,Internal DVO region identifier.
+processingVersion,ps_processingVersion,int16[pyarrow],dimensionless,False,Data release version.
+objInfoFlag,ps_objInfoFlag,int32[pyarrow],dimensionless,True,Information flag bitmask indicating details of the photometry. Values listed in ObjectInfoFlags.
+astrometryCorrectionFlag,ps_astrometryCorrectionFlag,int32[pyarrow],dimensionless,False,Information flag bitmask indicating details of the astrometry correction. Values listed in AstrometryCorrectionFlags.
+qualityFlag,ps_qualityFlag,int16[pyarrow],dimensionless,True,Subset of objInfoFlag denoting whether this object is real or a likely false positive. Values listed in ObjectQualityFlags.
+raStack,ps_raStack,double[pyarrow],Angle[deg],False,"Right ascension from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information."
+decStack,ps_decStack,double[pyarrow],Angle[deg],False,"Declination from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information."
+raStackErr,ps_raStackErr,double[pyarrow],Angle[arcsec],False,Right ascension standard deviation from stack detections.
+decStackErr,ps_decStackErr,double[pyarrow],Angle[arcsec],False,Declination standard deviation from stack detections.
+raMean,ps_raMean,double[pyarrow],Angle[deg],True,Right ascension from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.
+decMean,ps_decMean,double[pyarrow],Angle[deg],True,Declination from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.
+raMeanErr,ps_raMeanErr,double[pyarrow],Angle[arcsec],True,Right ascension standard deviation from single epoch detections.
+decMeanErr,ps_decMeanErr,double[pyarrow],Angle[arcsec],True,Declination standard deviation from single epoch detections.
+pmra,ps_pmra,double[pyarrow],AngularVelocity[mas/yr],True,Proper motion in right ascension direction from single epoch detections.
+pmdec,ps_pmdec,double[pyarrow],AngularVelocity[mas/yr],True,Proper motion in right ascension direction from single epoch detections.
+pmraErr,ps_pmraErr,double[pyarrow],AngularVelocity[mas/yr],True,RA proper motion standard deviation.
+pmdecErr,ps_pmdecErr,double[pyarrow],AngularVelocity[mas/yr],True,Dec proper motion standard deviation.
+epochMean,ps_epochMean,double[pyarrow],Time[d],True,"Modified Julian Date of the mean epoch corresponding to raMean, decMean (equinox J2000)."
+posMeanChisq,ps_posMeanChisq,double[pyarrow],dimensionless,False,Reduced chi squared value of mean position.
+cx,ps_cx,double[pyarrow],dimensionless,False,Cartesian x on a unit sphere.
+cy,ps_cy,double[pyarrow],dimensionless,False,Cartesian y on a unit sphere.
+cz,ps_cz,double[pyarrow],dimensionless,False,Cartesian z on a unit sphere.
+lambda,ps_lambda,double[pyarrow],Angle[deg],False,Ecliptic longitude.
+beta,ps_beta,double[pyarrow],Angle[deg],False,Ecliptic latitude.
+l,ps_l,double[pyarrow],Angle[deg],False,Galactic longitude.
+b,ps_b,double[pyarrow],Angle[deg],False,Galactic latitude.
+nStackObjectRows,ps_nStackObjectRows,int16[pyarrow],dimensionless,False,Number of independent StackObjectThin rows associated with this object.
+nStackDetections,ps_nStackDetections,int16[pyarrow],dimensionless,False,Number of stack detections.
+nDetections,ps_nDetections,int16[pyarrow],dimensionless,False,Number of single epoch detections in all filters.
+ng,ps_ng,int16[pyarrow],dimensionless,False,Number of single epoch detections in g filter.
+nr,ps_nr,int16[pyarrow],dimensionless,False,Number of single epoch detections in r filter.
+ni,ps_ni,int16[pyarrow],dimensionless,False,Number of single epoch detections in i filter.
+nz,ps_nz,int16[pyarrow],dimensionless,False,Number of single epoch detections in z filter.
+ny,ps_ny,int16[pyarrow],dimensionless,False,Number of single epoch detections in y filter.
+gQfPerfect,ps_gQfPerfect,double[pyarrow],dimensionless,False,Maximum PSF weighted fraction of pixels totally unmasked from g filter detections.
+gMeanPSFMag,ps_gMeanPSFMag,double[pyarrow],ABMagnitude[mag],False,Mean PSF magnitude from g filter detections.
+gMeanPSFMagErr,ps_gMeanPSFMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean PSF magnitude from g filter detections.
+gMeanPSFMagStd,ps_gMeanPSFMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of PSF magnitudes from g filter detections.
+gMeanPSFMagNpt,ps_gMeanPSFMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean PSF magnitude from g filter detections.
+gMeanPSFMagMin,ps_gMeanPSFMagMin,double[pyarrow],ABMagnitude[mag],False,Minimum PSF magnitude from g filter detections.
+gMeanPSFMagMax,ps_gMeanPSFMagMax,double[pyarrow],ABMagnitude[mag],False,Maximum PSF magnitude from g filter detections.
+gMeanKronMag,ps_gMeanKronMag,double[pyarrow],ABMagnitude[mag],False,Mean Kron (1980) magnitude from g filter detections.
+gMeanKronMagErr,ps_gMeanKronMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean Kron (1980) magnitude from g filter detections.
+gMeanKronMagStd,ps_gMeanKronMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of Kron (1980) magnitudes from g filter detections.
+gMeanKronMagNpt,ps_gMeanKronMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean Kron (1980) magnitude from g filter detections.
+gMeanApMag,ps_gMeanApMag,double[pyarrow],ABMagnitude[mag],True,Mean aperture magnitude from g filter detections.
+gMeanApMagErr,ps_gMeanApMagErr,double[pyarrow],ABMagnitude[mag],True,Error in mean aperture magnitude from g filter detections.
+gMeanApMagStd,ps_gMeanApMagStd,double[pyarrow],ABMagnitude[mag],True,Standard deviation of aperture magnitudes from g filter detections.
+gMeanApMagNpt,ps_gMeanApMagNpt,int16[pyarrow],dimensionless,True,Number of measurements included in mean aperture magnitude from g filter detections.
+gFlags,ps_gFlags,int32[pyarrow],dimensionless,True,Information flag bitmask for mean object from g filter detections. Values listed in ObjectFilterFlags.
+rQfPerfect,ps_rQfPerfect,double[pyarrow],dimensionless,False,Maximum PSF weighted fraction of pixels totally unmasked from r filter detections.
+rMeanPSFMag,ps_rMeanPSFMag,double[pyarrow],ABMagnitude[mag],False,Mean PSF magnitude from r filter detections.
+rMeanPSFMagErr,ps_rMeanPSFMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean PSF magnitude from r filter detections.
+rMeanPSFMagStd,ps_rMeanPSFMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of PSF magnitudes from r filter detections.
+rMeanPSFMagNpt,ps_rMeanPSFMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean PSF magnitude from r filter detections.
+rMeanPSFMagMin,ps_rMeanPSFMagMin,double[pyarrow],ABMagnitude[mag],False,Minimum PSF magnitude from r filter detections.
+rMeanPSFMagMax,ps_rMeanPSFMagMax,double[pyarrow],ABMagnitude[mag],False,Maximum PSF magnitude from r filter detections.
+rMeanKronMag,ps_rMeanKronMag,double[pyarrow],ABMagnitude[mag],False,Mean Kron (1980) magnitude from r filter detections.
+rMeanKronMagErr,ps_rMeanKronMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean Kron (1980) magnitude from r filter detections.
+rMeanKronMagStd,ps_rMeanKronMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of Kron (1980) magnitudes from r filter detections.
+rMeanKronMagNpt,ps_rMeanKronMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean Kron (1980) magnitude from r filter detections.
+rMeanApMag,ps_rMeanApMag,double[pyarrow],ABMagnitude[mag],True,Mean aperture magnitude from r filter detections.
+rMeanApMagErr,ps_rMeanApMagErr,double[pyarrow],ABMagnitude[mag],True,Error in mean aperture magnitude from r filter detections.
+rMeanApMagStd,ps_rMeanApMagStd,double[pyarrow],ABMagnitude[mag],True,Standard deviation of aperture magnitudes from r filter detections.
+rMeanApMagNpt,ps_rMeanApMagNpt,int16[pyarrow],dimensionless,True,Number of measurements included in mean aperture magnitude from r filter detections.
+rFlags,ps_rFlags,int32[pyarrow],dimensionless,True,Information flag bitmask for mean object from r filter detections. Values listed in ObjectFilterFlags.
+iQfPerfect,ps_iQfPerfect,double[pyarrow],dimensionless,False,Maximum PSF weighted fraction of pixels totally unmasked from i filter detections.
+iMeanPSFMag,ps_iMeanPSFMag,double[pyarrow],ABMagnitude[mag],False,Mean PSF magnitude from i filter detections.
+iMeanPSFMagErr,ps_iMeanPSFMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean PSF magnitude from i filter detections.
+iMeanPSFMagStd,ps_iMeanPSFMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of PSF magnitudes from i filter detections.
+iMeanPSFMagNpt,ps_iMeanPSFMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean PSF magnitude from i filter detections.
+iMeanPSFMagMin,ps_iMeanPSFMagMin,double[pyarrow],ABMagnitude[mag],False,Minimum PSF magnitude from i filter detections.
+iMeanPSFMagMax,ps_iMeanPSFMagMax,double[pyarrow],ABMagnitude[mag],False,Maximum PSF magnitude from i filter detections.
+iMeanKronMag,ps_iMeanKronMag,double[pyarrow],ABMagnitude[mag],False,Mean Kron (1980) magnitude from i filter detections.
+iMeanKronMagErr,ps_iMeanKronMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean Kron (1980) magnitude from i filter detections.
+iMeanKronMagStd,ps_iMeanKronMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of Kron (1980) magnitudes from i filter detections.
+iMeanKronMagNpt,ps_iMeanKronMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean Kron (1980) magnitude from i filter detections.
+iMeanApMag,ps_iMeanApMag,double[pyarrow],ABMagnitude[mag],True,Mean aperture magnitude from i filter detections.
+iMeanApMagErr,ps_iMeanApMagErr,double[pyarrow],ABMagnitude[mag],True,Error in mean aperture magnitude from i filter detections.
+iMeanApMagStd,ps_iMeanApMagStd,double[pyarrow],ABMagnitude[mag],True,Standard deviation of aperture magnitudes from i filter detections.
+iMeanApMagNpt,ps_iMeanApMagNpt,int16[pyarrow],dimensionless,True,Number of measurements included in mean aperture magnitude from i filter detections.
+iFlags,ps_iFlags,int32[pyarrow],dimensionless,True,Information flag bitmask for mean object from i filter detections. Values listed in ObjectFilterFlags.
+zQfPerfect,ps_zQfPerfect,double[pyarrow],dimensionless,False,Maximum PSF weighted fraction of pixels totally unmasked from z filter detections.
+zMeanPSFMag,ps_zMeanPSFMag,double[pyarrow],ABMagnitude[mag],False,Mean PSF magnitude from z filter detections.
+zMeanPSFMagErr,ps_zMeanPSFMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean PSF magnitude from z filter detections.
+zMeanPSFMagStd,ps_zMeanPSFMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of PSF magnitudes from z filter detections.
+zMeanPSFMagNpt,ps_zMeanPSFMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean PSF magnitude from z filter detections.
+zMeanPSFMagMin,ps_zMeanPSFMagMin,double[pyarrow],ABMagnitude[mag],False,Minimum PSF magnitude from z filter detections.
+zMeanPSFMagMax,ps_zMeanPSFMagMax,double[pyarrow],ABMagnitude[mag],False,Maximum PSF magnitude from z filter detections.
+zMeanKronMag,ps_zMeanKronMag,double[pyarrow],ABMagnitude[mag],False,Mean Kron (1980) magnitude from z filter detections.
+zMeanKronMagErr,ps_zMeanKronMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean Kron (1980) magnitude from z filter detections.
+zMeanKronMagStd,ps_zMeanKronMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of Kron (1980) magnitudes from z filter detections.
+zMeanKronMagNpt,ps_zMeanKronMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean Kron (1980) magnitude from z filter detections.
+zMeanApMag,ps_zMeanApMag,double[pyarrow],ABMagnitude[mag],False,Mean aperture magnitude from z filter detections.
+zMeanApMagErr,ps_zMeanApMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean aperture magnitude from z filter detections.
+zMeanApMagStd,ps_zMeanApMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of aperture magnitudes from z filter detections.
+zMeanApMagNpt,ps_zMeanApMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean aperture magnitude from z filter detections.
+zFlags,ps_zFlags,int32[pyarrow],dimensionless,False,Information flag bitmask for mean object from z filter detections. Values listed in ObjectFilterFlags.
+yQfPerfect,ps_yQfPerfect,double[pyarrow],dimensionless,False,Maximum PSF weighted fraction of pixels totally unmasked from y filter detections.
+yMeanPSFMag,ps_yMeanPSFMag,double[pyarrow],ABMagnitude[mag],False,Mean PSF magnitude from y filter detections.
+yMeanPSFMagErr,ps_yMeanPSFMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean PSF magnitude from y filter detections.
+yMeanPSFMagStd,ps_yMeanPSFMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of PSF magnitudes from y filter detections.
+yMeanPSFMagNpt,ps_yMeanPSFMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean PSF magnitude from y filter detections.
+yMeanPSFMagMin,ps_yMeanPSFMagMin,double[pyarrow],ABMagnitude[mag],False,Minimum PSF magnitude from y filter detections.
+yMeanPSFMagMax,ps_yMeanPSFMagMax,double[pyarrow],ABMagnitude[mag],False,Maximum PSF magnitude from y filter detections.
+yMeanKronMag,ps_yMeanKronMag,double[pyarrow],ABMagnitude[mag],False,Mean Kron (1980) magnitude from y filter detections.
+yMeanKronMagErr,ps_yMeanKronMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean Kron (1980) magnitude from y filter detections.
+yMeanKronMagStd,ps_yMeanKronMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of Kron (1980) magnitudes from y filter detections.
+yMeanKronMagNpt,ps_yMeanKronMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean Kron (1980) magnitude from y filter detections.
+yMeanApMag,ps_yMeanApMag,double[pyarrow],ABMagnitude[mag],False,Mean aperture magnitude from y filter detections.
+yMeanApMagErr,ps_yMeanApMagErr,double[pyarrow],ABMagnitude[mag],False,Error in mean aperture magnitude from y filter detections.
+yMeanApMagStd,ps_yMeanApMagStd,double[pyarrow],ABMagnitude[mag],False,Standard deviation of aperture magnitudes from y filter detections.
+yMeanApMagNpt,ps_yMeanApMagNpt,int16[pyarrow],dimensionless,False,Number of measurements included in mean aperture magnitude from y filter detections.
+yFlags,ps_yFlags,int32[pyarrow],dimensionless,False,Information flag bitmask for mean object from y filter detections. Values listed in ObjectFilterFlags.

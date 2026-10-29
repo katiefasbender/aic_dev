@@ -1,0 +1,154 @@
+column_name,data_type,unit,description
+solution_id,long,dimensionless,Solution Identifier
+designation,char,dimensionless,Unique source designation (unique across all Data Releases)
+source_id,long,dimensionless,Unique source identifier (unique within a particular Data Release)
+random_index,long,dimensionless,Random index for use when selecting subsets
+ref_epoch,double,Time[yr],Reference epoch
+ra,double,Angle[deg],Right ascension
+ra_error,float,Angle[mas],Standard error of right ascension
+dec,double,Angle[deg],Declination
+dec_error,float,Angle[mas],Standard error of declination
+parallax,double,Angle[mas],Parallax
+parallax_error,float,Angle[mas],Standard error of parallax
+parallax_over_error,float,dimensionless,Parallax divided by its standard error
+pm,float,AngularVelocity[mas/yr],Total proper motion
+pmra,double,AngularVelocity[mas/yr],Proper motion in right ascension direction
+pmra_error,float,AngularVelocity[mas/yr],Standard error of proper motion in right ascension direction
+pmdec,double,AngularVelocity[mas/yr],Proper motion in declination direction
+pmdec_error,float,AngularVelocity[mas/yr],Standard error of proper motion in declination direction
+ra_dec_corr,float,dimensionless,Correlation between right ascension and declination
+ra_parallax_corr,float,dimensionless,Correlation between right ascension and parallax
+ra_pmra_corr,float,dimensionless,Correlation between right ascension and proper motion in right ascension
+ra_pmdec_corr,float,dimensionless,Correlation between right ascension and proper motion in declination
+dec_parallax_corr,float,dimensionless,Correlation between declination and parallax
+dec_pmra_corr,float,dimensionless,Correlation between declination and proper motion in right ascension
+dec_pmdec_corr,float,dimensionless,Correlation between declination and proper motion in declination
+parallax_pmra_corr,float,dimensionless,Correlation between parallax and proper motion in right ascension
+parallax_pmdec_corr,float,dimensionless,Correlation between parallax and proper motion in declination
+pmra_pmdec_corr,float,dimensionless,Correlation between proper motion in right ascension and proper motion in declination
+astrometric_n_obs_al,short,dimensionless,Total number of observations in the along-scan (AL) direction
+astrometric_n_obs_ac,short,dimensionless,Total number of observations in the across-scan (AC) direction
+astrometric_n_good_obs_al,short,dimensionless,Number of good observations in the along-scan (AL) direction
+astrometric_n_bad_obs_al,short,dimensionless,Number of bad observations in the along-scan (AL) direction
+astrometric_gof_al,float,dimensionless,Goodness of fit statistic of model wrt along-scan observations
+astrometric_chi2_al,float,dimensionless,AL chi-square value
+astrometric_excess_noise,float,Angle[mas],Excess noise of the source
+astrometric_excess_noise_sig,float,dimensionless,Significance of excess noise
+astrometric_params_solved,short,dimensionless,Which parameters have been solved for?
+astrometric_primary_flag,boolean,dimensionless,Primary or seconday
+nu_eff_used_in_astrometry,float,Misc[1/um],Effective wavenumber of the source used in the astrometric solution
+pseudocolour,float,Misc[1/um],Astrometrically estimated pseudocolour of the source
+pseudocolour_error,float,Misc[1/um],Standard error of the pseudocolour of the source
+ra_pseudocolour_corr,float,dimensionless,Correlation between right ascension and pseudocolour
+dec_pseudocolour_corr,float,dimensionless,Correlation between declination and pseudocolour
+parallax_pseudocolour_corr,float,dimensionless,Correlation between parallax and pseudocolour
+pmra_pseudocolour_corr,float,dimensionless,Correlation between proper motion in right asension and pseudocolour
+pmdec_pseudocolour_corr,float,dimensionless,Correlation between proper motion in declination and pseudocolour
+astrometric_matched_transits,short,dimensionless,Matched FOV transits used in the AGIS solution
+visibility_periods_used,short,dimensionless,Number of visibility periods used in Astrometric solution
+astrometric_sigma5d_max,float,Angle[mas],The longest semi-major axis of the 5-d error ellipsoid
+matched_transits,short,dimensionless,The number of transits matched to this source
+new_matched_transits,short,dimensionless,The number of transits newly incorporated into an existing source in the current cycle
+matched_transits_removed,short,dimensionless,The number of transits removed from an existing source in the current cycle
+ipd_gof_harmonic_amplitude,float,dimensionless,Amplitude of the IPD GoF versus position angle of scan
+ipd_gof_harmonic_phase,float,Angle[deg],Phase of the IPD GoF versus position angle of scan
+ipd_frac_multi_peak,short,dimensionless,Percent of successful-IPD windows with more than one peak
+ipd_frac_odd_win,short,dimensionless,Percent of transits with truncated windows or multiple gate
+ruwe,float,dimensionless,Renormalised unit weight error
+scan_direction_strength_k1,float,dimensionless,Degree of concentration of scan directions across the source
+scan_direction_strength_k2,float,dimensionless,Degree of concentration of scan directions across the source
+scan_direction_strength_k3,float,dimensionless,Degree of concentration of scan directions across the source
+scan_direction_strength_k4,float,dimensionless,Degree of concentration of scan directions across the source
+scan_direction_mean_k1,float,Angle[deg],Mean position angle of scan directions across the source
+scan_direction_mean_k2,float,Angle[deg],Mean position angle of scan directions across the source
+scan_direction_mean_k3,float,Angle[deg],Mean position angle of scan directions across the source
+scan_direction_mean_k4,float,Angle[deg],Mean position angle of scan directions across the source
+duplicated_source,boolean,dimensionless,Source with multiple source identifiers
+phot_g_n_obs,short,dimensionless,Number of observations contributing to G photometry
+phot_g_mean_flux,double,Flux[e-/s],G-band mean flux
+phot_g_mean_flux_error,float,Flux[e-/s],Error on G-band mean flux
+phot_g_mean_flux_over_error,float,dimensionless,G-band mean flux divided by its error
+phot_g_mean_mag,float,VegaMagnitude[mag],G-band mean magnitude
+phot_bp_n_obs,short,dimensionless,Number of observations contributing to BP photometry
+phot_bp_mean_flux,double,Flux[e-/s],Integrated BP mean flux
+phot_bp_mean_flux_error,float,Flux[e-/s],Error on the integrated BP mean flux
+phot_bp_mean_flux_over_error,float,dimensionless,Integrated BP mean flux divided by its error
+phot_bp_mean_mag,float,VegaMagnitude[mag],Integrated BP mean magnitude
+phot_rp_n_obs,short,dimensionless,Number of observations contributing to RP photometry
+phot_rp_mean_flux,double,Flux[e-/s],Integrated RP mean flux
+phot_rp_mean_flux_error,float,Flux[e-/s],Error on the integrated RP mean flux
+phot_rp_mean_flux_over_error,float,dimensionless,Integrated RP mean flux divided by its error
+phot_rp_mean_mag,float,VegaMagnitude[mag],Integrated RP mean magnitude
+phot_bp_rp_excess_factor,float,dimensionless,BP/RP excess factor
+phot_bp_n_contaminated_transits,short,dimensionless,Number of BP contaminated transits
+phot_bp_n_blended_transits,short,dimensionless,Number of BP blended transits
+phot_rp_n_contaminated_transits,short,dimensionless,Number of RP contaminated transits
+phot_rp_n_blended_transits,short,dimensionless,Number of RP blended transits
+phot_proc_mode,short,dimensionless,Photometry processing mode
+bp_rp,float,VegaMagnitude[mag],BP - RP colour
+bp_g,float,VegaMagnitude[mag],BP - G colour
+g_rp,float,VegaMagnitude[mag],G - RP colour
+radial_velocity,float,Velocity[km/s],Radial velocity
+radial_velocity_error,float,Velocity[km/s],Radial velocity error
+rv_method_used,short,dimensionless,Method used to obtain the radial velocity
+rv_nb_transits,short,dimensionless,Number of transits used to compute the radial velocity
+rv_nb_deblended_transits,short,dimensionless,Number of valid transits that have undergone deblending
+rv_visibility_periods_used,short,dimensionless,Number of visibility periods used to estimate the radial velocity
+rv_expected_sig_to_noise,float,dimensionless,Expected signal to noise ratio in the combination of the spectra used to obtain the radial velocity
+rv_renormalised_gof,float,dimensionless,Radial velocity renormalised goodness of fit
+rv_chisq_pvalue,float,dimensionless,P-value for constancy based on a chi-squared criterion
+rv_time_duration,float,Time[day],Time coverage of the radial velocity time series
+rv_amplitude_robust,float,Velocity[km/s],Total amplitude in the radial velocity time series after outlier removal
+rv_template_teff,float,Temperature[K],Teff of the template used to compute the radial velocity
+rv_template_logg,float,GravitySurface[log(cm/s/s)],Logg of the template used to compute the radial velocity
+rv_template_fe_h,float,Metallicity[dex],[Fe/H] of the template used to compute the radial velocityy
+rv_atm_param_origin,short,dimensionless,Origin of the atmospheric parameters associated to the template
+vbroad,float,Velocity[km/s],Spectral line broadening parameter
+vbroad_error,float,Velocity[km/s],Uncertainty on the spectral line broadening
+vbroad_nb_transits,short,dimensionless,Number of transits used to compute vbroad
+grvs_mag,float,VegaMagnitude[mag],Integrated Grvs magnitude
+grvs_mag_error,float,VegaMagnitude[mag],Grvs magnitude uncertainty
+grvs_mag_nb_transits,short,dimensionless,Number of transits used to compute Grvs
+rvs_spec_sig_to_noise,float,dimensionless,Signal to noise ratio in the mean RVS spectrum
+phot_variable_flag,char,dimensionless,Photometric variability flag
+l,double,Angle[deg],Galactic longitude
+b,double,Angle[deg],Galactic latitude
+ecl_lon,double,Angle[deg],Ecliptic longitude
+ecl_lat,double,Angle[deg],Ecliptic latitude
+in_qso_candidates,boolean,dimensionless,Flag indicating the availability of additional information in the QsoCandidates table
+in_galaxy_candidates,boolean,dimensionless,Flag indicating the availability of additional information in the GalaxyCandidates table
+non_single_star,short,dimensionless,Flag indicating the availability of additional information in the various Non-Single Star tables
+has_xp_continuous,boolean,dimensionless,Flag indicating the availability of mean BP/RP spectrum in continuous representation for this source
+has_xp_sampled,boolean,dimensionless,Flag indicating the availability of mean BP/RP spectrum in sampled form for this source
+has_rvs,boolean,dimensionless,Flag indicating the availability of mean RVS spectrum for this source
+has_epoch_photometry,boolean,dimensionless,Flag indicating the availability of epoch photometry for this source
+has_epoch_rv,boolean,dimensionless,Flag indicating the availability of epoch radial velocity for this source
+has_mcmc_gspphot,boolean,dimensionless,Flag indicating the availability of GSP-Phot MCMC samples for this source
+has_mcmc_msc,boolean,dimensionless,Flag indicating the availability of MSC MCMC samples for this source
+in_andromeda_survey,boolean,dimensionless,Flag indicating that the source is present in the Gaia Andromeda Photometric Survey (GAPS)
+classprob_dsc_combmod_quasar,float,dimensionless,"Probability from DSC-Combmod of being a quasar (data used: BP/RP spectrum, photometry, astrometry)"
+classprob_dsc_combmod_galaxy,float,dimensionless,"Probability from DSC-Combmod of being a galaxy (data used: BP/RP spectrum, photometry, astrometry)"
+classprob_dsc_combmod_star,float,dimensionless,"Probability from DSC-Combmod of being a single star (but not a white dwarf) (data used: BP/RP spectrum, photometry, astrometry)"
+teff_gspphot,float,Temperature[K],Effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+teff_gspphot_lower,float,Temperature[K],Lower confidence level (16%) of effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+teff_gspphot_upper,float,Temperature[K],Upper confidence level (84%) of effective temperature from GSP-Phot Aeneas best library using BP/RP spectra
+logg_gspphot,float,GravitySurface[log(cm/s/s)],Surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+logg_gspphot_lower,float,GravitySurface[log(cm/s/s)],Lower confidence level (16%) of surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+logg_gspphot_upper,float,GravitySurface[log(cm/s/s)],Upper confidence level (84%) of surface gravity from GSP-Phot Aeneas best library using BP/RP spectra
+mh_gspphot,float,Metallicity[dex],Iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+mh_gspphot_lower,float,Metallicity[dex],Lower confidence level (16%) of iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+mh_gspphot_upper,float,Metallicity[dex],Upper confidence level (84%) of iron abundance from GSP-Phot Aeneas best library using BP/RP spectra
+distance_gspphot,float,Distance[pc],Distance from GSP-Phot Aeneas best library using BP/RP spectra
+distance_gspphot_lower,float,Distance[pc],Lower confidence level (16%) of distance from GSP-Phot Aeneas best library using BP/RP spectra
+distance_gspphot_upper,float,Distance[pc],Upper confidence level (84%) of distance from GSP-Phot Aeneas best library using BP/RP spectra
+azero_gspphot,float,VegaMagnitude[mag],Monochromatic extinction A0 at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+azero_gspphot_lower,float,VegaMagnitude[mag],Lower confidence level (16%) of monochromatic extinction A0 at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+azero_gspphot_upper,float,VegaMagnitude[mag],Upper confidence level (84%) of monochromatic extinction A0 at 547.7nm from GSP-Phot Aeneas best library using BP/RP spectra
+ag_gspphot,float,VegaMagnitude[mag],Extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+ag_gspphot_lower,float,VegaMagnitude[mag],Lower confidence level (16%) of extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+ag_gspphot_upper,float,VegaMagnitude[mag],Upper confidence level (84%) of extinction in G band from GSP-Phot Aeneas best library using BP/RP spectra
+ebpminrp_gspphot,float,VegaMagnitude[mag],Reddening E(GBP - GRP) from GSP-Phot Aeneas best library using BP/RP spectra
+ebpminrp_gspphot_lower,float,VegaMagnitude[mag],Lower confidence level (16%) of reddening E(GBP - GRP) from GSP-Phot Aeneas best library using BP/RP spectra
+ebpminrp_gspphot_upper,float,VegaMagnitude[mag],Upper confidence level (84%) of reddening E(GBP - GRP) from GSP-Phot Aeneas best library using BP/RP spectra
+libname_gspphot,char,dimensionless,Name of library that achieves the highest mean log-posterior in MCMC samples and was used to derive GSP-Phot parameters in this table
+pos,char,"Position[rad,rad]","The point position of a source (ra, dec) in radian."

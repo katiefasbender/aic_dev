@@ -1,0 +1,52 @@
+column_name,data_type,unit,description
+objName,VARCHAR(32),dimensionless,IAU name for this object.
+objPSOName,VARCHAR(32),dimensionless,Alternate Pan-STARRS name for this object.
+objAltName1,VARCHAR(32),dimensionless,Alternate name for this object.
+objAltName2,VARCHAR(32),dimensionless,Altername name for this object.
+objAltName3,VARCHAR(32),dimensionless,Altername name for this object.
+objPopularName,VARCHAR(140),dimensionless,Well known name for this object.
+objID,BIGINT,dimensionless,Unique object identifier.
+uniquePspsOBid,BIGINT,dimensionless,Unique internal PSPS object identifier.
+ippObjID,BIGINT,dimensionless,IPP internal object identifier.
+surveyID,TINYINT,dimensionless,Survey identifier. Details in the Survey table.
+htmID,BIGINT,dimensionless,Hierarchical triangular mesh (Szalay et al. 2007) index.
+zoneID,INT,dimensionless,Local zone index found by dividing the sky into bands of declination 1/2 arcminute in height: zoneID = floor((90 + declination)/0.0083333).
+tessID,TINYINT,dimensionless,Tessellation identifier. Details in the TessellationType table.
+projectionID,SMALLINT,dimensionless,Projection cell identifier.
+skyCellID,TINYINT,dimensionless,Skycell region identifier.
+randomID,FLOAT,dimensionless,Random value drawn from the interval between zero and one.
+batchID,BIGINT,dimensionless,Internal database batch identifier.
+dvoRegionID,INT,dimensionless,Internal DVO region identifier.
+processingVersion,TINYINT,dimensionless,Data release version.
+objInfoFlag,INT,dimensionless,Information flag bitmask indicating details of the photometry. Values listed in ObjectInfoFlags.
+astrometryCorrectionFlag,INT,dimensionless,Information flag bitmask indicating details of the astrometry correction. Values listed in AstrometryCorrectionFlags.
+qualityFlag,TINYINT,dimensionless,Subset of objInfoFlag denoting whether this object is real or a likely false positive. Values listed in ObjectQualityFlags.
+raStack,FLOAT,Angle[deg],"Right ascension from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information."
+decStack,FLOAT,Angle[deg],"Declination from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information."
+raStackErr,REAL,Angle[arcsec],Right ascension standard deviation from stack detections.
+decStackErr,REAL,Angle[arcsec],Declination standard deviation from stack detections.
+raMean,FLOAT,Angle[deg],Right ascension from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.
+decMean,FLOAT,Angle[deg],Declination from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.
+raMeanErr,REAL,Angle[arcsec],Right ascension standard deviation from single epoch detections.
+decMeanErr,REAL,Angle[arcsec],Declination standard deviation from single epoch detections.
+pmra,FLOAT,AngularVelocity[mas/yr],Proper motion in right ascension direction from single epoch detections.
+pmdec,FLOAT,AngularVelocity[mas/yr],Proper motion in right ascension direction from single epoch detections.
+pmraErr,FLOAT,AngularVelocity[mas/yr],RA proper motion standard deviation.
+pmdecErr,FLOAT,AngularVelocity[mas/yr],Dec proper motion standard deviation.
+epochMean,FLOAT,Time[MJD],"Modified Julian Date of the mean epoch corresponding to raMean, decMean and pmra, pmdec (equinox J2000). This is a weighted mean of the PS1 observation epochs."
+posMeanChisq,REAL,dimensionless,Reduced chi squared value of mean position.
+cx,FLOAT,dimensionless,Cartesian x on a unit sphere.
+cy,FLOAT,dimensionless,Cartesian y on a unit sphere.
+cz,FLOAT,dimensionless,Cartesian z on a unit sphere.
+lambda,FLOAT,Angle[deg],Ecliptic longitude.
+beta,FLOAT,Angle[deg],Ecliptic latitude.
+l,FLOAT,Angle[deg],Galactic longitude.
+b,FLOAT,Angle[deg],Galactic latitude.
+nStackObjectRows,SMALLINT,dimensionless,Number of independent StackObjectThin rows associated with this object.
+nStackDetections,SMALLINT,dimensionless,Number of stack detections.
+nDetections,SMALLINT,dimensionless,Number of single epoch detections in all filters.
+ng,SMALLINT,dimensionless,Number of single epoch detections in g filter.
+nr,SMALLINT,dimensionless,Number of single epoch detections in r filter.
+ni,SMALLINT,dimensionless,Number of single epoch detections in i filter.
+nz,SMALLINT,dimensionless,Number of single epoch detections in z filter.
+ny,SMALLINT,dimensionless,Number of single epoch detections in y filter.
